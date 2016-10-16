@@ -97,8 +97,8 @@ sub nagios_return($$) {
 		$message = "WTF is return code '$ret'??? ($message)";
 	}
 	$message = "$retstr - $message\n";
-	$! = $retval;
-	die ($message);
+	print $message;
+	exit($retval);
 }
 
 sub usage() {
